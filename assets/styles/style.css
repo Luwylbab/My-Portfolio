@@ -18,6 +18,7 @@ header {
 header h1 {
     display: inline-block;
     font-size: 48px;
+    padding-left: 20px;
 }
 
 header nav {
@@ -54,6 +55,7 @@ h2 {
     font-size: 50px;
     text-align: right;
     padding-top: 70px;
+    padding-right: 30px;
 }
 
 p {
@@ -65,7 +67,8 @@ p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.main {
+
+main {
     flex-direction: row;
     height: 800px;
     width: 100%;
@@ -74,16 +77,6 @@ p {
     background-position: center;
 }
 
-.content {
-    width: 75%;
-    display: inline-block;
-    margin-left: 20px;
-    margin-bottom: 50px;
-}
-
-.about-me {
-    width: 100%
-}
 
 h3 {
     border: 15px;
@@ -95,22 +88,82 @@ h3 {
 
 p:before {
     content: "";
-    border: 3px solid black;
-    align-self: stretch;
+    border: 3px solid rgb(33, 55, 87);
+    align-self: center;
 }
 
-.about-me-text {
-
+.work {
+    content: "";
+    display: flex;
+    justify-content: space-evenly;
 }
 
-@media screen and (max-width: 768px) {
-    header,
-    main {
-      flex-direction: column;
-    }
+.work div a img {
+    height: 70%;
+    width: 70%;
+}
+
+.content {
+    width: 100%;
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    margin-right: 20px;
+}
+
+.project-container {
+    display:flex;
+    flex-wrap:wrap;
+    width: 70%;
+    height: 30%;
+}
+
+.project {
+    flex: 1 50%;
+    height: 5%;
+}
+.work-img {
+    margin-left: 900px;
+}
+
+.project img {
+    height: 100%;
+    width: 100%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
   
-    section {
-        padding-right: 0;
-        flex-direction: row;
-    }
+  section:before {
+    content: "";
+    border: 1px solid #d3d3d3;
+    align-self: stretch;
+  }
+
+  .contact-me {
+    content: "";
+    display: flex;
+    justify-content: space-evenly;
 }
+  
+  .bottom-left {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #d3d3d3;
+    background-color: #2a607c;
+    position: relative;
+    bottom: 30px;
+    width: fit-content;
+    height: 30px;
+  }
+
+  @media (min-width: 768px) {
+    header {
+        font-size: 10%;
+    }
+    nav {
+        font-size: 10%;
+    }
+  }
